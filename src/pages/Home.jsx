@@ -1,4 +1,5 @@
 import { AppWindow, Puzzle, Palette, Cpu, Database, Blocks, FolderTree, CodeSquare, Image, BellRing, CheckCircle2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import FeaturedMarquee from '../components/FeaturedMarquee';
 import CategoryPreview from '../components/CategoryPreview';
@@ -56,6 +57,11 @@ const Home = () => {
 
     return (
         <div className="home-snapper">
+            <Helmet>
+                <title>SURYAStudio the digital workshop of suryaraj</title>
+                <meta name="description" content="Explore the digital workshop and projects of Surya Studio. Building modern tools, utilities, and aesthetic extensions." />
+            </Helmet>
+
             <div className="snap-section hero-section">
                 <Hero />
             </div>

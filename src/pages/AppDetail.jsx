@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { getAppById } from '../data/appsData';
 
 /**
@@ -108,8 +109,20 @@ const AppDetail = () => {
         );
     }
 
+    // Safely extract a stable image URL if one exists in the dynamic media array or object
+    const mediaArray = Array.isArray(app.media) ? app.media : app.media ? [app.media] : [];
+    const firstImageUrl = mediaArray.find(m => m.type === 'image')?.url || '';
+
     return (
         <div className="page-container app-detail-page">
+            <Helmet>
+                <title>{`${app.title} - Surya Studio`}</title>
+                <meta name="description" content={app.description} />
+                <meta property="og:title" content={`${app.title} - Surya Studio`} />
+                <meta property="og:description" content={app.description} />
+                {firstImageUrl && <meta property="og:image" content={firstImageUrl} />}
+            </Helmet>
+
             <Link to={`/${app.category}`} className="back-link">
                 <ArrowLeft size={16} /> Back to {app.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
             </Link>
