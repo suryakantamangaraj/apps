@@ -8,23 +8,22 @@ const MediaWrapper = ({ media }) => {
 
     if (mediaArray.length > 0) {
         return (
-            <div className="media-wrapper media-carousel-container" style={{ width: '100%', aspectRatio: '16/9', padding: 0, overflow: 'hidden', position: 'relative', display: 'block', borderRadius: '16px' }}>
+            <div className="media-wrapper media-carousel-container" style={{ width: '100%', padding: 0, overflow: 'hidden', position: 'relative', borderRadius: '16px' }}>
                 <div className="media-carousel" style={{
-                    position: 'absolute',
-                    top: 0, bottom: 0, left: 0, right: 0,
                     display: 'flex',
+                    alignItems: 'stretch',
                     overflowX: 'auto',
                     scrollSnapType: 'x mandatory',
                     scrollbarWidth: 'none',
                     msOverflowStyle: 'none'
                 }}>
                     {mediaArray.map((item, idx) => (
-                        <div key={idx} style={{ flex: '0 0 100%', width: '100%', height: '100%', position: 'relative', scrollSnapAlign: 'start', overflow: 'hidden', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+                        <div key={idx} style={{ flex: '0 0 100%', width: '100%', scrollSnapAlign: 'start', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                             {item.type === 'image' && (
-                                <img src={item.url} alt={`App Demo ${idx + 1}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+                                <img src={item.url} alt={`App Demo ${idx + 1}`} style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'contain' }} />
                             )}
                             {item.type === 'video' && (
-                                <video src={item.url} autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+                                <video src={item.url} autoPlay loop muted playsInline style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'contain' }} />
                             )}
                         </div>
                     ))}
