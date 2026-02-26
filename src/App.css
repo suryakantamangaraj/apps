@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(64, 92, 161, 0.85);
+  background: rgba(83, 116, 196, 0.85);
   /* fallback */
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -228,7 +228,7 @@
   font-size: 1.5rem;
   color: var(--text-secondary);
   max-width: 800px;
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem auto;
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
   opacity: 0;
 }
