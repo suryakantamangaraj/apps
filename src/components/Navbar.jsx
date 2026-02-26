@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <NavLink to="/" className="nav-brand" onClick={closeMenu}>
-        <Rocket size={28} />
+        <img src="/SURYASTUDIO.png" alt="Surya Studio Logo" style={{ height: '28px', width: 'auto' }} />
         <span>Surya Studio</span>
       </NavLink>
 
