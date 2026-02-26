@@ -9,7 +9,7 @@ const CategoryPreview = ({ title, description, appsArray, linkTo }) => {
                 <TypingHeading
                     text={title}
                     className="page-title title-gradient"
-                    style={{ fontSize: '2.5rem', margin: 0 }}
+                    style={{ margin: 0 }}
                 />
                 <p className="page-subtitle" style={{ margin: '0', maxWidth: '800px', marginTop: '1rem' }}>{description}</p>
             </div>
