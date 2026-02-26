@@ -5,6 +5,16 @@ import CategoryPreview from '../components/CategoryPreview';
 import Footer from '../components/Footer';
 import TypingHeading from '../components/TypingHeading';
 
+/**
+ * Home Page Component
+ * 
+ * Features a fullscreen CSS snap-scroll layout.
+ * Each child section implements `snap-section` to lock to the viewport.
+ * The arrays below dictate which apps are featured on these category landing grids.
+ * 
+ * RULE: Keep arrays here limited to a maximum of 4 featured items per category to maintain
+ * the quad-grid aesthetic layout without overflowing the snap scrolling viewpoot on small monitors.
+ */
 const Home = () => {
     // ============================================
     // 🚀 HOW TO FEATURE A NEW APP ON THE HOMEPAGE:

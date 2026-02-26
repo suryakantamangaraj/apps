@@ -2,6 +2,13 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { getAppById } from '../data/appsData';
 
+/**
+ * MediaWrapper Sub-Component
+ * 
+ * Dynamically handles generating the image/video hero section on the app detail page.
+ * It maps through an array of media items to create a horizontal snap-scroll carousel.
+ * If no media exists, it falls back to a CSS-styled wireframe placeholder.
+ */
 const MediaWrapper = ({ media }) => {
     // Normalize media to always be an array to easily handle multiple items
     const mediaArray = Array.isArray(media) ? media : media ? [media] : [];
@@ -72,9 +79,17 @@ const MediaWrapper = ({ media }) => {
     );
 };
 
+/**
+ * AppDetail Page Component
+ * 
+ * Renders the full details for a single target application.
+ * Grabs the precise app object from the global data store using the URL parameter `id`.
+ */
 const AppDetail = () => {
-    // Dynamically grab params and load data
+    // Extract the dynamic :id parameter from the react-router URL
     const { id } = useParams();
+
+    // Look up the full data object for this specific app
     const app = getAppById(id);
 
     // Render a localized 404 inside the layout if undefined id is passed
