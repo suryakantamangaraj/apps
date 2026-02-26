@@ -28,7 +28,7 @@ npm run build
 - **/public**: Contains static static assets and the `CNAME` file required for your custom `apps.suryaraj.com` domain.
 - **/src/components**: Reusable UI blocks (Navbar, Hero, Feature Marquee, Category Grid items, Glassmorphic Cards).
 - **/src/pages**: The main page views that map to routes (Home, CategoryView arrays, AppDetail breakdowns).
-- **/src/data/appsData.jsx**: The singular source of truth for all content on this application.
+- **/src/data**: The modular source of truth for all content on this application (divided by category, e.g. `appDataGoogleApps.jsx`).
 
 ---
 
@@ -38,8 +38,11 @@ To make managing your catalog as frictionless as possible, the entire site is dr
 
 To add a new app to the platform, follow these two simple steps:
 
-### Step 1: Add it to the Global Data Store
-Navigate to `src/data/appsData.jsx`. At the bottom of the `appsData` array, simply add a new Javascript object outlining your project's details.
+### Step 1: Add it to the Modular Data Store
+Navigate to `/src/data/` and open the file corresponding to your category (e.g., `appDataGoogleApps.jsx`). At the bottom of the exported array, simply add a new Javascript object outlining your project's details.
+
+**Note on Privacy Policies:**
+By default, you can use the `genericPrivacyPolicy` imported from `shared.jsx`. If your app requires a specific policy, replace the variable with a backticked string \`Your custom privacy text here\`.
 
 **Template Structure:**
 ```javascript
