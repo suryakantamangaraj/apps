@@ -1,42 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  /* Colors */
+  /* =========================================
+     GLOBAL COLOR PALETTE (Light Mode Default)
+     ========================================= */
   --bg-color: #5374c4;
+  /* Main site background (Blue) */
   --color1: #8b0000;
-  --color2: #000;
+  /* Primary accent / Brand red for buttons */
   --color3: #800000;
-  --color4: #8b0000;
+  /* Hover accent / Darker ruby interaction */
+
+  /* Text & Surface Variables */
   --white: #fff;
-  --black: #555;
-  --dark: #000;
   --off-white: #f8f8f8;
 
-  /* Additional variables for UI elements */
+  /* =========================================
+     GLASSMORPHISM OPACITY TOKENS
+     ========================================= */
   --glass-bg: rgba(255, 255, 255, 0.15);
+  /* Light, frosted glass backing */
   --glass-border: rgba(255, 255, 255, 0.25);
+  /* Sharp reflective edges */
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-  --text-active: var(--white);
-  --text-primary: var(--off-white);
-  --text-secondary: rgba(255, 255, 255, 0.7);
+  /* Floating depth cast */
 
-  /* Typography */
+  /* =========================================
+     TYPOGRAPHY & ACCESSIBILITY TOKENS
+     ========================================= */
+  --text-active: var(--white);
+  /* Highlighted titles / headers */
+  --text-primary: var(--off-white);
+  /* Standard body paragraphs */
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  /* Muted subtext / captions */
+
+  /* External Fonts */
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
 }
 
+/* =========================================
+   DARK MODE OVERRIDES (Triggered via toggle)
+   ========================================= */
 :root[data-theme="dark"] {
   --bg-color: #000;
+  /* Absolute cinema black */
   --color1: #5374c4;
-  --color2: #000;
+  /* Buttons swap to relaxing blue */
   --color3: #425ea3;
-  --color4: #5374c4;
+  /* Button hover states map to deeper blue */
+
+  /* Adjusted Glass Layers */
   --glass-bg: rgba(255, 255, 255, 0.08);
+  /* Extremely subtle contrast frost layer */
   --glass-border: rgba(255, 255, 255, 0.15);
+  /* Fainter reflective edge */
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  /* Heavier ambient depth cast */
+
+  /* Text Overrides for Dark Mode Math */
   --text-active: #8b0000;
+  /* Action items swap to brand red */
   --text-primary: var(--white);
+  /* Pitch perfect white reading text */
   --text-secondary: rgba(255, 255, 255, 0.65);
+  /* Lower intensity paragraphs */
 }
 
 * {
