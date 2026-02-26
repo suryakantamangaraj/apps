@@ -10,25 +10,29 @@ const Home = () => {
     const googleAppsData = [
         { id: "sheet-automator", title: "Sheet Automator", desc: "Sync latest financial data into Sheets seamlessly.", icon: <AppWindow size={32} /> },
         { id: "drive-organizer", title: "Drive Organizer", desc: "Automated tagging and archiving for optimal storage.", icon: <FolderTree size={32} /> },
-        { id: "docs-exporter", title: "Docs Exporter", desc: "Bulk transform Google Docs into clean Markdown files.", icon: <CodeSquare size={32} /> }
+        { id: "docs-exporter", title: "Docs Exporter", desc: "Bulk transform Google Docs into clean Markdown files.", icon: <CodeSquare size={32} /> },
+        { id: "forms-webhook", title: "Forms Webhook", desc: "Instantly trigger external API calls and Slack alerts.", icon: <Database size={32} /> }
     ];
 
     const extensionsData = [
         { id: "link-manager-pro", title: "Link Manager Pro", desc: "Categorize, save, and export open tabs.", icon: <Puzzle size={32} /> },
         { id: "focus-mode-plus", title: "Focus Mode Plus", desc: "Block distracting sites strictly during work hours.", icon: <BellRing size={32} /> },
-        { id: "image-grabber", title: "DOM Image Grabber", desc: "Extract and zip all images straight from a loaded DOM.", icon: <Image size={32} /> }
+        { id: "image-grabber", title: "DOM Image Grabber", desc: "Extract and zip all images straight from a loaded DOM.", icon: <Image size={32} /> },
+        { id: "cookie-cleaner", title: "Cookie Cleaner", desc: "Purge domain-specific cookies in one click.", icon: <AppWindow size={32} /> }
     ];
 
     const themesData = [
         { id: "suryaraj-dark", title: "Suryaraj Dark", desc: "Interstellar colors for VS Code and NeoVim.", icon: <Palette size={32} /> },
         { id: "terminal-matrix", title: "Terminal Matrix", desc: "ZSH and iTerm2 cohesive environment setups.", icon: <Cpu size={32} /> },
-        { id: "syntax-highlighter", title: "Treesitter Blocks", desc: "Custom JSON injection for optimal block scopes.", icon: <Blocks size={32} /> }
+        { id: "syntax-highlighter", title: "Treesitter Blocks", desc: "Custom JSON injection for optimal block scopes.", icon: <Blocks size={32} /> },
+        { id: "ocean-breeze", title: "Ocean Breeze", desc: "A calming desktop palette for deep work.", icon: <Palette size={32} /> }
     ];
 
     const miscData = [
         { id: "dotfiles-hub", title: "Dotfiles Hub", desc: "macOS/Linux workspace replication script.", icon: <Cpu size={32} /> },
         { id: "markdown-utils", title: "Markdown Utilities", desc: "Python crawlers for dead link validation.", icon: <Database size={32} /> },
-        { id: "network-sniffer", title: "Network Sniffer", desc: "Local packet routing visibility for debugging.", icon: <AppWindow size={32} /> }
+        { id: "network-sniffer", title: "Network Sniffer", desc: "Local packet routing visibility for debugging.", icon: <AppWindow size={32} /> },
+        { id: "log-parser", title: "Log Parser", desc: "Blazing fast Rust log parser.", icon: <Cpu size={32} /> }
     ];
 
     return (

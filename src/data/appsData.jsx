@@ -74,6 +74,24 @@ export const appsData = [
             { title: "Secure Export", description: "Does not require wide Drive OAuth scopes, only individual document access.", icon: <Shield size={24} /> }
         ]
     },
+    {
+        id: "forms-webhook",
+        category: "google-apps",
+        title: "Forms Webhook",
+        tagline: "Trigger immediate API calls on form submission.",
+        description: "Instantly trigger external API calls and Slack alerts whenever a Google Form is successfully submitted.",
+        version: "1.2.0",
+        lastUpdated: "Mar 2026",
+        platform: "Apps Script",
+        storeLink: "https://workspace.google.com/marketplace",
+        privacyPolicy: genericPrivacyPolicy,
+        icon: <Database size={32} />,
+        features: [
+            { title: "Real-time", description: "Zero delay between submission and Webhook execution.", icon: <Zap size={24} /> },
+            { title: "Custom Payloads", description: "Map form fields dynamically to JSON.", icon: <Layout size={24} /> },
+            { title: "Secure", description: "Supports hardened authorization headers natively.", icon: <Shield size={24} /> }
+        ]
+    },
     // Extensions
     {
         id: "link-manager-pro",
@@ -127,6 +145,24 @@ export const appsData = [
             { title: "Deep Scan", description: "Finds CSS background images often missed by right-click saving.", icon: <Zap size={24} /> },
             { title: "Auto Zip", description: "Packages 100+ images instantly into a single compressed download.", icon: <Layout size={24} /> },
             { title: "Client Side", description: "Processing happens on your RAM, not an external server.", icon: <Shield size={24} /> }
+        ]
+    },
+    {
+        id: "cookie-cleaner",
+        category: "extensions",
+        title: "Cookie Cleaner",
+        tagline: "Purge domain-specific cookies in one click.",
+        description: "A developer tool that aggressively clears all cookies and local storage tokens for the active tab's domain without affecting other sites.",
+        version: "2.1.0",
+        lastUpdated: "Dec 2025",
+        platform: "Chrome",
+        storeLink: "https://chrome.google.com/webstore",
+        privacyPolicy: genericPrivacyPolicy,
+        icon: <AppWindow size={32} />,
+        features: [
+            { title: "Targeted", description: "Only affects the exact URL domain you are currently viewing.", icon: <Zap size={24} /> },
+            { title: "Comprehensive", description: "Scraps cookies, localStorage, and sessionStorage.", icon: <Layout size={24} /> },
+            { title: "Safe", description: "Leaves authenticated sessions on other tabs completely untouched.", icon: <Shield size={24} /> }
         ]
     },
     // Themes
@@ -184,6 +220,24 @@ export const appsData = [
             { title: "Lua First", description: "Written completely in pure Lua to maximize Neovim compatability.", icon: <Shield size={24} /> }
         ]
     },
+    {
+        id: "ocean-breeze",
+        category: "themes",
+        title: "Ocean Breeze",
+        tagline: "A calming desktop palette for deep work.",
+        description: "A sleek combination of teals and midnight blues designed to reduce eye strain during late-night coding sessions.",
+        version: "1.0.2",
+        lastUpdated: "Jan 2026",
+        platform: "VS Code",
+        storeLink: "https://marketplace.visualstudio.com",
+        privacyPolicy: genericPrivacyPolicy,
+        icon: <Palette size={32} />,
+        features: [
+            { title: "Accessible", description: "High contrast ratios for crystal clear legibility.", icon: <Zap size={24} /> },
+            { title: "Calming", description: "Cool tones designed to keep you relaxed and focused.", icon: <Layout size={24} /> },
+            { title: "Universal", description: "Supports over 40+ language syntaxes perfectly.", icon: <Shield size={24} /> }
+        ]
+    },
     // Misc
     {
         id: "dotfiles-hub",
@@ -237,6 +291,24 @@ export const appsData = [
             { title: "Blazing Fast", description: "Built in Rust for native OS performance.", icon: <Zap size={24} /> },
             { title: "Terminal UI", description: "Clean TUI dashboard that operates identically across OS systems.", icon: <Layout size={24} /> },
             { title: "Encrypted Logs", description: "All output captures are encrypted natively.", icon: <Shield size={24} /> }
+        ]
+    },
+    {
+        id: "log-parser",
+        category: "misc",
+        title: "Log Parser",
+        tagline: "Blazing fast Rust log parser.",
+        description: "CLI utility to instantly query and filter gigabytes of server logs natively using regex matching.",
+        version: "0.5.0",
+        lastUpdated: "Feb 2026",
+        platform: "Rust/CLI",
+        storeLink: "https://github.com",
+        privacyPolicy: genericPrivacyPolicy,
+        icon: <Cpu size={32} />,
+        features: [
+            { title: "Multithreaded", description: "Chews through gigabytes of logs in milliseconds.", icon: <Zap size={24} /> },
+            { title: "Regex Native", description: "Full PCRE matching for complex extraction tasks.", icon: <Layout size={24} /> },
+            { title: "Memory Safe", description: "Zero crash guarantee through strict Rust memory models.", icon: <Shield size={24} /> }
         ]
     }
 ];
