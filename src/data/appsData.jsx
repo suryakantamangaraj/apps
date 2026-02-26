@@ -19,6 +19,16 @@ Contact:
 If you have questions about this specific policy or the implementation details, feel free to reach out via my main site or GitHub repository.`;
 
 export const appsData = [
+    // ============================================
+    // 🚀 HOW TO ADD A NEW APP:
+    // ============================================
+    // 1. Copy an existing object bracket { ... } completely.
+    // 2. Paste it at the bottom of the corresponding category (or make a new one).
+    // 3. Change the 'id' string to something mathematically unique (ex: "super-app-2").
+    // 4. Update the icon by importing a new one from 'lucide-react' at the top of the file.
+    // 5. Be sure to matching the 'category' exact string to match its grouping!
+    // -> After doing this, open src/pages/Home.jsx and add its preview dict into the top state arrays to show it on the homepage!
+
     // Google Apps
     {
         id: "sheet-automator",

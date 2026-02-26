@@ -6,7 +6,16 @@ import Footer from '../components/Footer';
 import TypingHeading from '../components/TypingHeading';
 
 const Home = () => {
-    // Setup data for the category previews
+    // ============================================
+    // 🚀 HOW TO FEATURE A NEW APP ON THE HOMEPAGE:
+    // ============================================
+    // To make an app show up mathematically on the scrolling home page:
+    // 1. You must first create the app details in `src/data/appsData.jsx`.
+    // 2. Look exactly at the 'id' you gave it in the data file.
+    // 3. Add a new object inside the relevant array below (e.g. googleAppsData).
+    // 4. Set the `id:` to MATCH EXACTLY the slug you created in appsData.jsx.
+    // 
+    // Tip: You can adjust these lists to feature only your top apps by deleting / adding to them!
     const googleAppsData = [
         { id: "sheet-automator", title: "Sheet Automator", desc: "Sync latest financial data into Sheets seamlessly.", icon: <AppWindow size={32} /> },
         { id: "drive-organizer", title: "Drive Organizer", desc: "Automated tagging and archiving for optimal storage.", icon: <FolderTree size={32} /> },
