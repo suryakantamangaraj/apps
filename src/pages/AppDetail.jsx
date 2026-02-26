@@ -19,12 +19,12 @@ const MediaWrapper = ({ media }) => {
                     msOverflowStyle: 'none'
                 }}>
                     {mediaArray.map((item, idx) => (
-                        <div key={idx} style={{ flex: '0 0 100%', width: '100%', height: '100%', scrollSnapAlign: 'start', overflow: 'hidden' }}>
+                        <div key={idx} style={{ flex: '0 0 100%', width: '100%', height: '100%', scrollSnapAlign: 'start', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                             {item.type === 'image' && (
-                                <img src={item.url} alt={`App Demo ${idx + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src={item.url} alt={`App Demo ${idx + 1}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                             )}
                             {item.type === 'video' && (
-                                <video src={item.url} autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <video src={item.url} autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                             )}
                         </div>
                     ))}
