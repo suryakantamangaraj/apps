@@ -2,18 +2,36 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { getAppById } from '../data/appsData';
 
-const MediaWrapper = () => (
-    <div className="media-wrapper">
-        <div className="media-placeholder">
-            <div className="media-dots">
-                <span></span><span></span><span></span>
+const MediaWrapper = ({ media }) => {
+    if (media && media.type === 'image') {
+        return (
+            <div className="media-wrapper" style={{ padding: 0, overflow: 'hidden' }}>
+                <img src={media.url} alt="App Demo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
-            <div className="media-content">
-                Image / Video Demo<br />(16:9 Aspect Ratio)
+        );
+    }
+
+    if (media && media.type === 'video') {
+        return (
+            <div className="media-wrapper" style={{ padding: 0, overflow: 'hidden' }}>
+                <video src={media.url} autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+        );
+    }
+
+    return (
+        <div className="media-wrapper">
+            <div className="media-placeholder">
+                <div className="media-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <div className="media-content">
+                    Image / Video Demo<br />(16:9 Aspect Ratio)
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
 const AppDetail = () => {
     // Dynamically grab params and load data
@@ -61,7 +79,7 @@ const AppDetail = () => {
                 </div>
 
                 <div className="app-hero-media">
-                    <MediaWrapper />
+                    <MediaWrapper media={app.media} />
                 </div>
             </section>
 

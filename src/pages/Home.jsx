@@ -1,4 +1,4 @@
-import { AppWindow, Puzzle, Palette, Cpu, Database, Blocks, FolderTree, CodeSquare, Image, BellRing } from 'lucide-react';
+import { AppWindow, Puzzle, Palette, Cpu, Database, Blocks, FolderTree, CodeSquare, Image, BellRing, CheckCircle2 } from 'lucide-react';
 import Hero from '../components/Hero';
 import FeaturedMarquee from '../components/FeaturedMarquee';
 import CategoryPreview from '../components/CategoryPreview';
@@ -27,7 +27,8 @@ const Home = () => {
         { id: "link-manager-pro", title: "Link Manager Pro", desc: "Categorize, save, and export open tabs.", icon: <Puzzle size={32} /> },
         { id: "focus-mode-plus", title: "Focus Mode Plus", desc: "Block distracting sites strictly during work hours.", icon: <BellRing size={32} /> },
         { id: "image-grabber", title: "DOM Image Grabber", desc: "Extract and zip all images straight from a loaded DOM.", icon: <Image size={32} /> },
-        { id: "cookie-cleaner", title: "Cookie Cleaner", desc: "Purge domain-specific cookies in one click.", icon: <AppWindow size={32} /> }
+        { id: "cookie-cleaner", title: "Cookie Cleaner", desc: "Purge domain-specific cookies in one click.", icon: <AppWindow size={32} /> },
+        { id: "task-wizard", title: "Task Wizard", desc: "Aesthetic task management inside your browser.", icon: <CheckCircle2 size={32} /> }
     ];
 
     const themesData = [

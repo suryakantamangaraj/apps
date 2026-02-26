@@ -1,4 +1,4 @@
-import { Puzzle, BellRing, Image, AppWindow, Zap, Layout, Shield } from 'lucide-react';
+import { Puzzle, BellRing, Image, AppWindow, Zap, Layout, Shield, CheckCircle2, Palette } from 'lucide-react';
 import { genericPrivacyPolicy } from './shared';
 
 export const appDataExtensions = [
@@ -72,6 +72,28 @@ export const appDataExtensions = [
             { title: "Targeted", description: "Only affects the exact URL domain you are currently viewing.", icon: <Zap size={24} /> },
             { title: "Comprehensive", description: "Scraps cookies, localStorage, and sessionStorage.", icon: <Layout size={24} /> },
             { title: "Safe", description: "Leaves authenticated sessions on other tabs completely untouched.", icon: <Shield size={24} /> }
+        ]
+    },
+    {
+        id: "task-wizard",
+        category: "extensions",
+        title: "Task Wizard",
+        tagline: "Aesthetic task management inside your browser.",
+        description: "Transform your new tab page into a beautifully crafted, frosted glassmorphism productivity dashboard. Organize tasks, track deadlines, and eliminate the noise.",
+        version: "1.0.0",
+        lastUpdated: "Feb 2026",
+        platform: "Chrome / Edge",
+        storeLink: "https://chrome.google.com/webstore",
+        privacyPolicy: genericPrivacyPolicy,
+        icon: <CheckCircle2 size={32} />,
+        media: {
+            type: "image",
+            url: "/media/extensions/task-wizard/demo.png"
+        },
+        features: [
+            { title: "Glassmorphism UI", description: "Immersive frosted glass design makes organizing tasks visually delightfully.", icon: <Palette size={24} /> },
+            { title: "Smart Prioritization", description: "Automatically sort tickets by approaching deadlines and relevance.", icon: <Zap size={24} /> },
+            { title: "Fully Local", description: "All tasks are stored completely locally via localStorage. Zero cloud syncing.", icon: <Shield size={24} /> }
         ]
     }
 ];
