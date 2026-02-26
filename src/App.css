@@ -209,8 +209,8 @@
   scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 2rem 5%;
+  justify-content: flex-start;
+  padding: 6rem 5% 2rem 5%;
   position: relative;
 }
 

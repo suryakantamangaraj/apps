@@ -29,7 +29,7 @@ const CategoryPreview = ({ title, description, appsArray, linkTo }) => {
                 ))}
             </div>
 
-            <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'flex-end' }}>
                 <Link to={linkTo} className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     See all in {title} <ArrowRight size={18} />
                 </Link>

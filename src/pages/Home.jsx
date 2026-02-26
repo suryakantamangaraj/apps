@@ -33,7 +33,7 @@ const Home = () => {
 
     return (
         <div className="home-snapper">
-            <div className="snap-section">
+            <div className="snap-section" style={{ justifyContent: 'center', padding: '2rem 5%' }}>
                 <Hero />
             </div>
 
