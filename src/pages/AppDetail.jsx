@@ -3,22 +3,62 @@ import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { getAppById } from '../data/appsData';
 
 const MediaWrapper = ({ media }) => {
-    if (media && media.type === 'image') {
+    // Normalize media to always be an array to easily handle multiple items
+    const mediaArray = Array.isArray(media) ? media : media ? [media] : [];
+
+    if (mediaArray.length > 0) {
         return (
-            <div className="media-wrapper" style={{ padding: 0, overflow: 'hidden' }}>
-                <img src={media.url} alt="App Demo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div className="media-wrapper media-carousel-container" style={{ width: '100%', height: '100%', padding: 0, overflow: 'hidden', position: 'relative' }}>
+                <div className="media-carousel" style={{
+                    display: 'flex',
+                    overflowX: 'auto',
+                    scrollSnapType: 'x mandatory',
+                    width: '100%',
+                    height: '100%',
+                    scrollbarWidth: 'none',
+                    msOverflowStyle: 'none'
+                }}>
+                    {mediaArray.map((item, idx) => (
+                        <div key={idx} style={{ flex: '0 0 100%', width: '100%', height: '100%', scrollSnapAlign: 'start', overflow: 'hidden' }}>
+                            {item.type === 'image' && (
+                                <img src={item.url} alt={`App Demo ${idx + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            )}
+                            {item.type === 'video' && (
+                                <video src={item.url} autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            )}
+                        </div>
+                    ))}
+                </div>
+                {/* Scroll indicators if there is more than 1 item */}
+                {mediaArray.length > 1 && (
+                    <div style={{ position: 'absolute', bottom: '1rem', left: '0', right: '0', display: 'flex', justifyContent: 'center', gap: '0.5rem', pointerEvents: 'none' }}>
+                        {mediaArray.map((_, idx) => (
+                            <div key={idx} style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.7)', boxShadow: '0 2px 4px rgba(0,0,0,0.3)' }} />
+                        ))}
+                    </div>
+                )}
+                {/* Visual hint that it's scrollable */}
+                {mediaArray.length > 1 && (
+                    <div style={{
+                        position: 'absolute',
+                        top: '1rem',
+                        right: '1rem',
+                        background: 'rgba(0,0,0,0.5)',
+                        color: 'white',
+                        padding: '0.25rem 0.75rem',
+                        borderRadius: '20px',
+                        fontSize: '0.75rem',
+                        pointerEvents: 'none',
+                        backdropFilter: 'blur(4px)'
+                    }}>
+                        Swipe to see more
+                    </div>
+                )}
             </div>
         );
     }
 
-    if (media && media.type === 'video') {
-        return (
-            <div className="media-wrapper" style={{ padding: 0, overflow: 'hidden' }}>
-                <video src={media.url} autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-        );
-    }
-
+    // Fallback UI if NO media is provided setup
     return (
         <div className="media-wrapper">
             <div className="media-placeholder">

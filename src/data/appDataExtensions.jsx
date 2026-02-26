@@ -86,10 +86,11 @@ export const appDataExtensions = [
         storeLink: "https://chrome.google.com/webstore",
         privacyPolicy: genericPrivacyPolicy,
         icon: <CheckCircle2 size={32} />,
-        media: {
-            type: "image",
-            url: "/media/extensions/task-wizard/demo.png"
-        },
+        media: [
+            { type: "image", url: "/media/extensions/task-wizard/demo.png" },
+            { type: "image", url: "/media/extensions/task-wizard/demo2.png" },
+            { type: "video", url: "/media/extensions/task-wizard/demo.mp4" }
+        ],
         features: [
             { title: "Glassmorphism UI", description: "Immersive frosted glass design makes organizing tasks visually delightfully.", icon: <Palette size={24} /> },
             { title: "Smart Prioritization", description: "Automatically sort tickets by approaching deadlines and relevance.", icon: <Zap size={24} /> },
