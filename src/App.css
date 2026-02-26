@@ -214,6 +214,16 @@
   position: relative;
 }
 
+.hero-section {
+  justify-content: center;
+  padding: 2rem 5%;
+}
+
+.footer-snap-section {
+  justify-content: space-between;
+  padding: 0;
+}
+
 .hero {
   text-align: center;
 }
@@ -821,4 +831,111 @@
 
 .privacy-content strong {
   color: var(--white);
+}
+
+/* -------------------------------------- */
+/* Global Responsive Mobile Overrides     */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Layout Spacing */
+  .page-container {
+    padding: 2rem 5%;
+  }
+
+  .snap-section {
+    padding: 3rem 5% 1rem 5%;
+  }
+
+  /* Hero Architecture */
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  /* Typography & Titles */
+  .page-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  /* Section Spacing Fixes */
+  .category-section {
+    margin-bottom: 3rem;
+  }
+
+  /* Bento Grids */
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* App Cards */
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .app-card {
+    padding: 1.2rem;
+  }
+
+  /* Marquee Shrink */
+  .marquee-card {
+    width: 250px;
+  }
+
+  /* Search Bar */
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input-wrapper {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .marquee-card {
+    width: 220px;
+  }
+
+  .snap-section {
+    padding: 2.5rem 5% 1rem 5%;
+  }
 }

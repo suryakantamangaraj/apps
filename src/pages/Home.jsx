@@ -37,7 +37,7 @@ const Home = () => {
 
     return (
         <div className="home-snapper">
-            <div className="snap-section" style={{ justifyContent: 'center', padding: '2rem 5%' }}>
+            <div className="snap-section hero-section">
                 <Hero />
             </div>
 
@@ -77,7 +77,7 @@ const Home = () => {
                 />
             </div>
 
-            <div className="snap-section" style={{ padding: 0, justifyContent: 'space-between' }}>
+            <div className="snap-section footer-snap-section">
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <FeaturedMarquee />
                 </div>
