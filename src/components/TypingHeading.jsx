@@ -8,10 +8,7 @@ const TypingHeading = ({ text, className, Element = 'h2', style = {} }) => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
-                }
+                setIsVisible(entry.isIntersecting);
             },
             { threshold: 0.1 }
         );
@@ -35,12 +32,14 @@ const TypingHeading = ({ text, className, Element = 'h2', style = {} }) => {
             }, 50);
 
             return () => clearInterval(interval);
+        } else {
+            setDisplayedText('');
         }
     }, [isVisible, text]);
 
     return (
-        <Element ref={elementRef} className={className} style={{...style, minHeight: '1.2em' }}>
-            <span style={{visibility: isVisible ? 'visible' : 'hidden'}}>
+        <Element ref={elementRef} className={className} style={{ ...style, minHeight: '1.2em' }}>
+            <span style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
                 {isVisible ? displayedText : text}
             </span>
             {isVisible && displayedText.length < text.length && <span className="typing-cursor">&nbsp;</span>}
