@@ -8,7 +8,7 @@ const MediaWrapper = ({ media }) => {
 
     if (mediaArray.length > 0) {
         return (
-            <div className="media-wrapper media-carousel-container" style={{ width: '100%', height: '100%', padding: 0, overflow: 'hidden', position: 'relative' }}>
+            <div className="media-wrapper media-carousel-container" style={{ width: '100%', aspectRatio: '16/9', padding: 0, overflow: 'hidden', position: 'relative', display: 'flex', borderRadius: '16px' }}>
                 <div className="media-carousel" style={{
                     display: 'flex',
                     overflowX: 'auto',
