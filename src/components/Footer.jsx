@@ -3,7 +3,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <p className="footer-copy">
-                    &copy; {new Date().getFullYear()} Suryakanta Mangaraj. All rights reserved.
+                    &copy; 2024 - {new Date().getFullYear()} Surya Raj | Surya Studio &bull; Engineered with Excellence 🛠️ by Surya
                 </p>
             </div>
         </footer>
