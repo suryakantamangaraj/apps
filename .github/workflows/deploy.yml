@@ -20,7 +20,9 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm ci || npm install
+        # react-helmet-async@2.x declares react peer <=18, but we run React 19.
+        # --legacy-peer-deps bypasses this strict check (same as local dev setup).
+        run: npm install --legacy-peer-deps
 
       - name: Build Project
         run: npm run build
