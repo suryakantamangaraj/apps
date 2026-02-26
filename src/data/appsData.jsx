@@ -26,7 +26,8 @@ export const appsData = [
     // 2. Paste it at the bottom of the corresponding category (or make a new one).
     // 3. Change the 'id' string to something mathematically unique (ex: "super-app-2").
     // 4. Update the icon by importing a new one from 'lucide-react' at the top of the file.
-    // 5. Be sure to matching the 'category' exact string to match its grouping!
+    // 5. To customize the Privacy Policy, replace `genericPrivacyPolicy` with a unique template string \`Your custom text\`
+    // 6. Be sure to matching the 'category' exact string to match its grouping!
     // -> After doing this, open src/pages/Home.jsx and add its preview dict into the top state arrays to show it on the homepage!
 
     // Google Apps
@@ -58,7 +59,14 @@ export const appsData = [
         lastUpdated: "Jan 2026",
         platform: "Google Drive",
         storeLink: "https://workspace.google.com/marketplace",
-        privacyPolicy: genericPrivacyPolicy,
+        privacyPolicy: `This is a custom privacy policy exclusively for Drive Organizer. 
+
+Unlike other tools, Drive Organizer requires OAuth permissions to read your metadata.
+
+How it works:
+1. We request readonly metadata scope.
+2. We never scrape file contents.
+3. Your folder names are stored in local storage for quick access.`,
         icon: <FolderTree size={32} />,
         features: [
             { title: "Smart Tagging", description: "AI-based tagging infers project scope and relevance natively.", icon: <Zap size={24} /> },
