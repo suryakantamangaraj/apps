@@ -113,6 +113,23 @@ const AppDetail = () => {
     const mediaArray = Array.isArray(app.media) ? app.media : app.media ? [app.media] : [];
     const firstImageUrl = mediaArray.find(m => m.type === 'image')?.url || '';
 
+    // Generate strict Google-friendly SoftwareApplication Schema.org JSON-LD
+    const schemaJSONLD = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": app.title,
+        "description": app.description,
+        "applicationCategory": app.category,
+        "operatingSystem": app.platform || "Any",
+        "softwareVersion": app.version || "1.0.0",
+        "url": app.storeLink || ""
+    };
+
+    if (firstImageUrl) {
+        // Appending the origin domain if we have a relative static asset path
+        schemaJSONLD.image = firstImageUrl.startsWith('http') ? firstImageUrl : `https://apps.suryaraj.com${firstImageUrl}`;
+    }
+
     return (
         <div className="page-container app-detail-page">
             <Helmet>
@@ -121,6 +138,9 @@ const AppDetail = () => {
                 <meta property="og:title" content={`${app.title} - Surya Studio`} />
                 <meta property="og:description" content={app.description} />
                 {firstImageUrl && <meta property="og:image" content={firstImageUrl} />}
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaJSONLD)}
+                </script>
             </Helmet>
 
             <Link to={`/${app.category}`} className="back-link">
