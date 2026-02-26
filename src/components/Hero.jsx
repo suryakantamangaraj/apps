@@ -1,22 +1,8 @@
-import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
+import TypingHeading from './TypingHeading';
 
 const Hero = () => {
-  const [text, setText] = useState('');
   const fullText = "Building tools that remove friction.";
-  
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setText(fullText.slice(0, index));
-      index++;
-      if (index > fullText.length) {
-        clearInterval(interval);
-      }
-    }, 50); // Typing speed
-
-    return () => clearInterval(interval);
-  }, []);
 
   const handleScroll = () => {
     const section = document.getElementById('arsenal-categories');
@@ -27,10 +13,11 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <h1 className="title-gradient">
-        {text}
-        <span className="typing-cursor">&nbsp;</span>
-      </h1>
+      <TypingHeading
+        Element="h1"
+        text={fullText}
+        className="title-gradient"
+      />
       <p>
         Welcome to my digital armory. I am passionate about crafting seamless, aesthetic, and
         highly functional utilities. Whether you need an extension to focus, a customized script
