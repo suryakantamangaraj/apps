@@ -64,16 +64,19 @@ const Home = () => {
                 />
             </div>
 
+            <div className="snap-section">
+                <CategoryPreview
+                    title="Miscellaneous"
+                    description="Scripts, snippets, and tools that defy categorization, but are nonetheless crucial for specific workflows."
+                    appsArray={miscData}
+                    linkTo="/misc"
+                />
+            </div>
+
             <div className="snap-section" style={{ padding: 0, justifyContent: 'space-between' }}>
-                <div style={{ padding: '2rem 5%', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <CategoryPreview
-                        title="Miscellaneous"
-                        description="Scripts, snippets, and tools that defy categorization, but are nonetheless crucial for specific workflows."
-                        appsArray={miscData}
-                        linkTo="/misc"
-                    />
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <FeaturedMarquee />
                 </div>
-                <FeaturedMarquee />
                 <Footer />
             </div>
         </div>
