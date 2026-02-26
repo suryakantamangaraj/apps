@@ -7,6 +7,7 @@
     "dev": "vite",
     "prebuild": "node generate-sitemap.js",
     "build": "vite build",
+    "postbuild": "node ping-indexnow.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
