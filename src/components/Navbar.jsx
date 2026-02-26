@@ -5,12 +5,12 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(() => {
-    // Check local storage or system preference on mount
+    // Check local storage on mount, otherwise strictly default to LIGHT mode
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       return savedTheme === 'dark';
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return false; // Force default mode to be light
   });
 
   useEffect(() => {
