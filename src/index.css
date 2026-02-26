@@ -25,6 +25,16 @@
   --font-heading: 'Space Grotesk', sans-serif;
 }
 
+:root[data-theme="dark"] {
+  --bg-color: #0b1121;
+  --glass-bg: rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --text-active: #ffffff;
+  --text-primary: #e2e8f0;
+  --text-secondary: rgba(255, 255, 255, 0.5);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -1,9 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    // Check local storage or system preference on mount
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+
+  useEffect(() => {
+    // Isolated application of data-theme
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
+
+  const toggleDarkMode = () => setIsDark(!isDark);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -49,6 +70,13 @@ const Navbar = () => {
           <a href="https://suryaraj.com" className="nav-external-btn" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
             suryaraj.com
           </a>
+        </li>
+        <li>
+          <button onClick={toggleDarkMode} className="theme-toggle" aria-label="Toggle Dark Mode" style={{
+            background: 'none', border: 'none', color: 'var(--white)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.4rem', borderRadius: '50%', transition: 'background-color 0.3s ease'
+          }}>
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
         </li>
       </ul>
     </nav>
