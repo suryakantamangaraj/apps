@@ -125,6 +125,14 @@ You have total control over your data. Because all data is stored locally, unins
 Contact:
 If you have questions about this policy or the implementation details, feel free to reach out via contact@suryaraj.com`,
         icon: <Puzzle size={32} />,
+        media: [
+            { type: "image", url: "/media/extensions/tailwind-ify/featured_tile_440x280.png" },
+            { type: "image", url: "/media/extensions/tailwind-ify/google_copied.png" },
+            { type: "image", url: "/media/extensions/tailwind-ify/google_inspection.png" },
+            { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_hero.png" },
+            { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_copied.png" },
+            { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_inspection.png" },
+        ],
         features: [
             { title: "Real-Time Conversion", description: "Instantly convert CSS styles to Tailwind classes as you inspect elements.", icon: <Zap size={24} /> },
             { title: "Customizable", description: "Adjust Tailwind configurations to match your project setup.", icon: <Layout size={24} /> },
