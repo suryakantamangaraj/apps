@@ -81,9 +81,9 @@ export const appDataExtensions = [
         tagline: "Aesthetic task management inside your browser.",
         description: "Transform your new tab page into a beautifully crafted, frosted glassmorphism productivity dashboard. Organize tasks, track deadlines, and eliminate the noise.",
         version: "1.0.0",
-        lastUpdated: "Feb 2026",
-        platform: "Chrome / Edge",
-        storeLink: "https://chrome.google.com/webstore",
+        lastUpdated: "November 2024",
+        platform: "Chrome",
+        storeLink: "https://chromewebstore.google.com/detail/ooookbehgjagiomcfhalicofgpcfmcfn",
         privacyPolicy: genericPrivacyPolicy,
         icon: <CheckCircle2 size={32} />,
         media: [
@@ -95,6 +95,24 @@ export const appDataExtensions = [
             { title: "Glassmorphism UI", description: "Immersive frosted glass design makes organizing tasks visually delightfully.", icon: <Palette size={24} /> },
             { title: "Smart Prioritization", description: "Automatically sort tickets by approaching deadlines and relevance.", icon: <Zap size={24} /> },
             { title: "Fully Local", description: "All tasks are stored completely locally via localStorage. Zero cloud syncing.", icon: <Shield size={24} /> }
+        ]
+    },
+    {
+        id: "tailwind-ify",
+        category: "extensions",
+        title: "Tailwind-ify",
+        tagline: "Convert CSS to Tailwind classes effortlessly.",
+        description: "A Chrome extension that inspects your webpage's styles and converts them into Tailwind CSS classes in real-time.",
+        version: "1.0.0",
+        lastUpdated: "March 2026",
+        platform: "Chrome",
+        storeLink: "https://chrome.google.com/webstore",
+        privacyPolicy: `# Privacy Policy for Tailwind-ify\n\nThis Privacy Policy applies to the Tailwind-ify Chrome extension. This tool was built to be transparent and respect your digital footprint. This document outlines exactly what data is collected and how it is utilized.\n\n## Data Collection & Usage:\nTailwind-ify is designed for zero data collection. All CSS processing and Tailwind class conversion occurs locally on your device within the browser's sandbox.\n\n• Chrome Permissions (activeTab): This permission is used exclusively to inspect the styles of elements on the webpage you are currently viewing. No browsing history or page content is recorded or transmitted.\n• Local Storage: Any configurations or preferences are stored locally using standard Chrome Storage APIs. No data is synced to external servers.\n• Analytics: Tailwind-ify does not include any third-party tracking or analytics SDKs.\n\n## Third-Party Services:\nThis tool does not sell, rent, or share personal information with third parties. It is a standalone developer tool with no external API dependencies.\n\n## Your Controls:\nYou have total control over your data. Because all data is stored locally, uninstalling the extension or clearing your browser data will immediately purge all related configurations.\n\n## Contact:\nIf you have questions about this policy or the implementation details, feel free to reach out via contact@suryaraj.com`,
+        icon: <Puzzle size={32} />, 
+        features: [
+            { title: "Real-Time Conversion", description: "Instantly convert CSS styles to Tailwind classes as you inspect elements.", icon: <Zap size={24} /> },
+            { title: "Customizable", description: "Adjust Tailwind configurations to match your project setup.", icon: <Layout size={24} /> },
+            { title: "Local Processing", description: "All operations are performed locally, ensuring privacy and speed.", icon: <Shield size={24} /> }
         ]
     }
 ];
