@@ -31,21 +31,70 @@ const PrivacyPolicy = () => {
             </div>
 
             <article className="privacy-content">
-                <h1 className="title-gradient">{app.title} Privacy Policy</h1>
-                <p className="last-updated" style={{ marginBottom: '3rem', paddingBottom: '2rem', borderBottom: '1px solid var(--glass-border)', color: 'var(--text-secondary)' }}>
-                    Last Updated: {app.lastUpdated}
-                </p>
+                <header style={{ marginBottom: '3rem', borderBottom: '1px solid var(--glass-border)', paddingBottom: '2rem' }}>
+                    <h1 className="title-gradient">{app.title} Privacy Policy</h1>
+                    <p className="last-updated" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                        Last Updated: {app.lastUpdated}
+                    </p>
+                </header>
 
-                <div
-                    className="privacy-text-body"
-                    style={{
-                        whiteSpace: 'pre-wrap',
-                        lineHeight: '2',
-                        fontSize: '1.1rem',
-                        color: 'var(--off-white)'
-                    }}
-                >
-                    {app.privacyPolicy}
+                <div className="privacy-text-body">
+                    {app.privacyPolicy.split('\n\n').map((block, index) => {
+                        // Skip if it's an H1 that just repeats the title
+                        if (block.startsWith('# ')) {
+                            const headerText = block.replace('# ', '').toLowerCase();
+                            if (headerText.includes('privacy policy') || headerText.includes(app.title.toLowerCase())) {
+                                return null;
+                            }
+                            return <h2 key={index}>{block.replace('# ', '')}</h2>;
+                        }
+                        
+                        // Header 2
+                        if (block.startsWith('## ')) {
+                            return <h2 key={index} style={{ marginTop: '2.5rem' }}>{block.replace('## ', '')}</h2>;
+                        }
+
+                        // Bullet Points
+                        if (block.includes('\n• ') || block.startsWith('• ')) {
+                            const lines = block.split('\n');
+                            const listItems = [];
+                            const paragraphs = [];
+
+                            lines.forEach(line => {
+                                const trimmed = line.trim();
+                                if (trimmed.startsWith('•')) {
+                                    listItems.push(trimmed.replace(/^•\s*/, ''));
+                                } else if (trimmed) {
+                                    paragraphs.push(trimmed);
+                                }
+                            });
+
+                            return (
+                                <section key={index} style={{ margin: '1.5rem 0' }}>
+                                    {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+                                    <ul>
+                                        {listItems.map((item, i) => {
+                                            const [label, ...descParts] = item.split(':');
+                                            const desc = descParts.join(':');
+                                            return (
+                                                <li key={i}>
+                                                    {desc ? (
+                                                        <>
+                                                            <strong>{label}:</strong> {desc}
+                                                        </>
+                                                    ) : (
+                                                        item
+                                                    )}
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
+                                </section>
+                            );
+                        }
+                        // Default Paragraph
+                        return <p key={index} style={{ marginBottom: '1.5rem' }}>{block}</p>;
+                    })}
                 </div>
             </article>
         </div>

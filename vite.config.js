@@ -29,7 +29,9 @@ const getDynamicRoutes = () => {
     const regex = /id:\s*(["'])(.*?)\1/g;
     let match;
     while ((match = regex.exec(content)) !== null) {
-      dynamicRoutes.push(`/app/${match[2]}`);
+      const appId = match[2];
+      dynamicRoutes.push(`/app/${appId}`);
+      dynamicRoutes.push(`/app/${appId}/privacy`);
     }
   }
 
