@@ -131,7 +131,7 @@ If you have questions about this policy or the implementation details, feel free
             { type: "image", url: "/media/extensions/tailwind-ify/google_inspection.png" },
             { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_hero.png" },
             { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_copied.png" },
-            { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_inspection.png" },
+            { type: "image", url: "/media/extensions/tailwind-ify/suryaraj_button.png" },
         ],
         features: [
             { title: "Real-Time Conversion", description: "Instantly convert CSS styles to Tailwind classes as you inspect elements.", icon: <Zap size={24} /> },
