@@ -103,12 +103,28 @@ export const appDataExtensions = [
         title: "Tailwind-ify",
         tagline: "Convert CSS to Tailwind classes effortlessly.",
         description: "A Chrome extension that inspects your webpage's styles and converts them into Tailwind CSS classes in real-time.",
-        version: "1.0.0",
+        version: "1.0.1",
         lastUpdated: "March 2026",
         platform: "Chrome",
         storeLink: "https://chrome.google.com/webstore",
-        privacyPolicy: `# Privacy Policy for Tailwind-ify\n\nThis Privacy Policy applies to the Tailwind-ify Chrome extension. This tool was built to be transparent and respect your digital footprint. This document outlines exactly what data is collected and how it is utilized.\n\n## Data Collection & Usage:\nTailwind-ify is designed for zero data collection. All CSS processing and Tailwind class conversion occurs locally on your device within the browser's sandbox.\n\n• Chrome Permissions (activeTab): This permission is used exclusively to inspect the styles of elements on the webpage you are currently viewing. No browsing history or page content is recorded or transmitted.\n• Local Storage: Any configurations or preferences are stored locally using standard Chrome Storage APIs. No data is synced to external servers.\n• Analytics: Tailwind-ify does not include any third-party tracking or analytics SDKs.\n\n## Third-Party Services:\nThis tool does not sell, rent, or share personal information with third parties. It is a standalone developer tool with no external API dependencies.\n\n## Your Controls:\nYou have total control over your data. Because all data is stored locally, uninstalling the extension or clearing your browser data will immediately purge all related configurations.\n\n## Contact:\nIf you have questions about this policy or the implementation details, feel free to reach out via contact@suryaraj.com`,
-        icon: <Puzzle size={32} />, 
+        privacyPolicy: `This Privacy Policy applies to the Tailwind-ify Chrome extension. This tool was built to be transparent and respect your digital footprint.
+
+Data Collection & Usage:
+Tailwind-ify is designed for zero data collection. All CSS processing and Tailwind class conversion occurs locally on your device within the browser's sandbox.
+
+• Chrome Permissions (activeTab): This permission is used exclusively to inspect the styles of elements on the webpage you are currently viewing. No browsing history or page content is recorded or transmitted.
+• Local Storage: Any configurations or preferences are stored locally using standard Chrome Storage APIs. No data is synced to external servers.
+• Analytics: Tailwind-ify does not include any third-party tracking or analytics SDKs.
+
+Third-Party Services:
+This tool does not sell, rent, or share personal information with third parties. It is a standalone developer tool with no external API dependencies.
+
+Your Controls:
+You have total control over your data. Because all data is stored locally, uninstalling the extension or clearing your browser data will immediately purge all related configurations.
+
+Contact:
+If you have questions about this policy or the implementation details, feel free to reach out via contact@suryaraj.com`,
+        icon: <Puzzle size={32} />,
         features: [
             { title: "Real-Time Conversion", description: "Instantly convert CSS styles to Tailwind classes as you inspect elements.", icon: <Zap size={24} /> },
             { title: "Customizable", description: "Adjust Tailwind configurations to match your project setup.", icon: <Layout size={24} /> },
