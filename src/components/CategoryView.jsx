@@ -34,7 +34,7 @@ const CategoryView = () => {
     const { categorySlug } = useParams();
     const [searchQuery, setSearchQuery] = useState('');
 
-    // Format category slug to Title Case (e.g. google-apps -> Google Apps)
+    // Format category slug to Title Case (e.g. apps -> Apps)
     const categoryName = categorySlug
         ? categorySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
         : 'Category';

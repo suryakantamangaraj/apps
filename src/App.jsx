@@ -22,7 +22,7 @@ function App() {
             {/* Index Route: Displays the landing page snap-scroll feed */}
             <Route index element={<Home />} />
 
-            {/* Dynamic Category Layout: Captures slugs like /google-apps or /themes */}
+            {/* Dynamic Category Layout: Captures slugs like /apps or /themes */}
             <Route path=":categorySlug" element={<CategoryView />} />
 
             {/* App Detail Routes: Render specific app architectures by ID */}

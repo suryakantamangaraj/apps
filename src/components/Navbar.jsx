@@ -47,8 +47,8 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/google-apps" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeMenu}>
-            Google Apps
+          <NavLink to="/apps" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={closeMenu}>
+            Apps
           </NavLink>
         </li>
         <li>
