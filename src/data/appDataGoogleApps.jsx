@@ -4,7 +4,7 @@ import { genericPrivacyPolicy } from './shared';
 export const appDataGoogleApps = [
     {
         id: "sheet-automator",
-        category: "google-apps",
+        category: "apps",
         title: "Sheet Automator",
         tagline: "Sync latest financial data into Sheets seamlessly.",
         description: "A custom Apps Script library that pulls the latest financial data directly into Sheets, cleaning formatting issues automatically.",
@@ -22,7 +22,7 @@ export const appDataGoogleApps = [
     },
     {
         id: "drive-organizer",
-        category: "google-apps",
+        category: "apps",
         title: "Drive Organizer",
         tagline: "Automated tagging and archiving for optimal storage.",
         description: "Scan and archive old files, freeing up storage while maintaining an organized directory structure based on project tags.",
@@ -47,7 +47,7 @@ How it works:
     },
     {
         id: "docs-exporter",
-        category: "google-apps",
+        category: "apps",
         title: "Docs Exporter",
         tagline: "Bulk transform Google Docs into clean Markdown.",
         description: "Bulk transform Google Docs into clean Markdown files for offline wikis.",
@@ -65,7 +65,7 @@ How it works:
     },
     {
         id: "forms-webhook",
-        category: "google-apps",
+        category: "apps",
         title: "Forms Webhook",
         tagline: "Trigger immediate API calls on form submission.",
         description: "Instantly trigger external API calls and Slack alerts whenever a Google Form is successfully submitted.",

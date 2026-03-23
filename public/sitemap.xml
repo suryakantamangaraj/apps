@@ -76,6 +76,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://apps.suryaraj.com/app/tailwind-ify</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apps.suryaraj.com/app/tailwind-ify/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://apps.suryaraj.com/app/sheet-automator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

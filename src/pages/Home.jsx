@@ -68,10 +68,10 @@ const Home = () => {
 
             <div className="snap-section" id="arsenal-categories">
                 <CategoryPreview
-                    title="Google Apps"
+                    title="Apps"
                     description="A collection of scripts and integrations designed specifically for Google Workspace apps to automate mundane tasks."
                     appsArray={googleAppsData}
-                    linkTo="/google-apps"
+                    linkTo="/apps"
                 />
             </div>
 

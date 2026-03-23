@@ -82,8 +82,11 @@ export const appDataExtensions = [
         description: "Transform your new tab page into a beautifully crafted, frosted glassmorphism productivity dashboard. Organize tasks, track deadlines, and eliminate the noise.",
         version: "1.0.0",
         lastUpdated: "November 2024",
-        platform: "Chrome",
-        storeLink: "https://chromewebstore.google.com/detail/ooookbehgjagiomcfhalicofgpcfmcfn",
+        platform: "Chrome / Safari",
+        links: [
+            { url: "https://chromewebstore.google.com/detail/ooookbehgjagiomcfhalicofgpcfmcfn", label: "Chrome Web Store" },
+            { url: "#", label: "Safari Extension" }
+        ],
         privacyPolicy: genericPrivacyPolicy,
         icon: <CheckCircle2 size={32} />,
         media: [

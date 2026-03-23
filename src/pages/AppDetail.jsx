@@ -122,7 +122,7 @@ const AppDetail = () => {
         "applicationCategory": app.category,
         "operatingSystem": app.platform || "Any",
         "softwareVersion": app.version || "1.0.0",
-        "url": app.storeLink || ""
+        "url": app.storeLink || (app.links && app.links.length > 0 ? app.links[0].url : "")
     };
 
     if (firstImageUrl) {
@@ -160,9 +160,21 @@ const AppDetail = () => {
                     <p className="app-hero-pitch">{app.tagline}</p>
                     <p className="app-hero-desc">{app.description}</p>
 
-                    <a href={app.storeLink} target="_blank" rel="noopener noreferrer" className="btn-primary app-cta">
-                        Download / View in Store <ArrowUpRight size={18} />
-                    </a>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                        {app.links && app.links.length > 0 ? (
+                            app.links.map((link, idx) => (
+                                <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="btn-primary app-cta">
+                                    {link.label || 'Download / View in Store'} <ArrowUpRight size={18} />
+                                </a>
+                            ))
+                        ) : (
+                            app.storeLink && (
+                                <a href={app.storeLink} target="_blank" rel="noopener noreferrer" className="btn-primary app-cta">
+                                    {app.storeLinkLabel || 'Download / View in Store'} <ArrowUpRight size={18} />
+                                </a>
+                            )
+                        )}
+                    </div>
                 </div>
 
                 <div className="app-hero-media">
